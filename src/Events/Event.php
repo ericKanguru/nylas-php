@@ -317,7 +317,8 @@ class Event
                 V::key('status', V::stringType()),
                 V::key('name', V::stringType()),
                 V::key('comment', V::stringType())
-            )))
+            ))),
+            V::keyOptional('metadata', V::arrayType())
         );
     }
 
