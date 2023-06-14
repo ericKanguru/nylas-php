@@ -370,7 +370,9 @@ class Event
             // timespan
             V::keySet(
                 V::key('end_time', V::timestampType()),
-                V::key('start_time', V::timestampType())
+                V::key('start_time', V::timestampType()),
+                V::keyOptional('end_timezone', V::stringType()->notEmpty()),
+                V::keyOptional('start_timezone', V::stringType()->notEmpty())
             ),
 
             // date span
